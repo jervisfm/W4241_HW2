@@ -30,7 +30,7 @@ public class Polynomial {
 	}
 	
 	public int getOrder() {
-		return coeff.size();
+		return coeff.size() - 1;
 	}
 	
 	/**
@@ -73,4 +73,17 @@ public class Polynomial {
 		
 		coeff.set(n, val);
 	}
+	
+	public String toString() {
+		StringBuffer sb = new StringBuffer(); 
+		int x = getOrder();
+		for (double a: coeff) {
+			sb.append(a + "x^"+ x);
+			if (x > 0)
+				sb.append(" + ");
+			--x;
+		}
+		return sb.toString();
+	}
+	
 }

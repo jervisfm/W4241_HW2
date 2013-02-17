@@ -14,6 +14,15 @@ import java.util.ArrayList;
  */
 public class ShawTraub {
 
+	/**
+	 * Returns all normalized derivatives of the given polynomial 'p'
+	 * evaluated at 'x'
+	 * @param p - the polynomial
+	 * @param x - point to evaluate
+	 * @return all derivatives in a list where the index number represents 
+	 * the order of the derivative evaluated. E.g. index 0 will be the
+	 * 0-th order polynomial
+	 */
 	public static ArrayList<Double> getDerivatives(Polynomial p, double x) {
 		int polyOrder = p.getOrder(); 
 		int n = polyOrder;
