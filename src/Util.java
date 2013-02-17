@@ -1,3 +1,6 @@
+import java.io.File;
+import java.util.Scanner;
+
 
 /**
  * 
@@ -23,4 +26,22 @@ public class Util {
 			return false;
 	}
 	
+	/**
+	 * Returns given file to memory
+	 * @param f
+	 * @return
+	 */
+	public static String readFileToMemory(File f) throws Exception {
+		
+		if (!f.exists())
+			throw new Exception("File does not exist: " + f);
+		
+		Scanner in  = new Scanner(f);
+		StringBuffer sb = new StringBuffer();
+		while (in.hasNextLine()) {
+			sb.append(in.nextLine());
+			sb.append("\n");
+		}
+		return sb.toString();
+	}
 }
