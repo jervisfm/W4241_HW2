@@ -51,6 +51,14 @@ public class ShawTraub {
 					V.set(j, i, val);
 				}
 			}
+			
+			/* We finally need to add to VMatrix the result of 
+			 * N-th derivative of the polynomial. This turns to simply be
+			 * the coefficient of the x^n term and thus need not be computed
+			 */
+			double val = p.getCoeffXPow(n);
+			V.set(n, n, val); 
+			
 		} catch (Exception e) {
 			System.out.println("An error occured: " + e);
 			e.printStackTrace();
@@ -64,7 +72,7 @@ public class ShawTraub {
 		int polyOrder = v.size();
 		ArrayList<Double> result = new ArrayList<Double>(polyOrder);
 		try {
-			for (int i = 0; i < polyOrder; ++i) {
+			for (int i = 0; i <= polyOrder; ++i) {
 				double val = v.get(i, polyOrder);
 				result.add(val);
 			}
