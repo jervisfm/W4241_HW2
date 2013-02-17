@@ -24,7 +24,6 @@ public class ShawTraubTest {
 		double expected_d2 = 1;
 		
 		ArrayList<Double> actual = ShawTraub.getDerivatives(p, x);
-		System.out.println("Actual size ==" + actual.size());
 		assertEquals(expected_d0, actual.get(0), err);
 		assertEquals(expected_d1, actual.get(1), err);
 		assertEquals(expected_d2, actual.get(2), err);
