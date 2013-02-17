@@ -51,6 +51,14 @@ public class VMatrix {
 	}
 	
 	/**
+	 * Return the Order of PolyNomail N that this VMatrix was made for.
+	 * @return
+	 */
+	public int size() {
+		return this.size;
+	}
+	
+	/**
 	 * Verifies that the given inputs for indexing into the 
 	 * matrix are valid (same range as the mathematical notations). 
 	 * @param row
