@@ -86,7 +86,7 @@ All *Normalized* Polynomial Derivatives of above polynomial are listed below:
 
 Result Discussion
 =================
-As it can be seen from the result above, I got the same result from running my program as I did for when I did the computation manually with a spreadsheet. 
+As it can be seen from the results above, I got the same result from running my program as I did for when I did the computation manually with a spreadsheet. 
 
 If one wants the "actual" evaluated derivative, then they can obtain it as follows:
 
