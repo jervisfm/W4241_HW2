@@ -64,16 +64,22 @@ public class ShawTraub {
 			e.printStackTrace();
 		}
 		
-		return getDerivativesFromVMatrix(V);
+		return getDerivativesFromVMatrix(V, x);
 	}
 	
-	private static ArrayList<Double> getDerivativesFromVMatrix(VMatrix v) {
+	/**
+	 * Returns normalized derivatives. 
+	 * @param v
+	 * @return
+	 */
+	private static ArrayList<Double> getDerivativesFromVMatrix(VMatrix v, 
+															   double x) {
 		
 		int polyOrder = v.size();
 		ArrayList<Double> result = new ArrayList<Double>(polyOrder);
 		try {
 			for (int i = 0; i <= polyOrder; ++i) {
-				double val = v.get(i, polyOrder);
+				double val = v.get(i, polyOrder) / Math.pow(x, i);
 				result.add(val);
 			}
 		} catch (Exception e) {
