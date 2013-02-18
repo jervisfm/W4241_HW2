@@ -3,7 +3,7 @@ import java.util.ArrayList;
 
 
 /**
- * 
+ * Main Program
  * @author Jervis
  *
  */
@@ -14,6 +14,7 @@ public class Main {
 		String msg = "Usage: \n" +
 					 "java main [file-path]";
 	}
+	
 	public static void main(String[] args) {
 	
 		if (args.length != 1) {
@@ -40,7 +41,7 @@ public class Main {
 		
 		String msg = String.format("Given Polynomial: %s\n" +
 								  "All *Normalized* Polynomial Derivatives of " +
-								  "above polynomial are listed below:\n\n");
+								  "above polynomial are listed below:\n\n", p);
 		
 		System.out.println(msg);
 		ShawTraub.printDerivatives(derivatives);
