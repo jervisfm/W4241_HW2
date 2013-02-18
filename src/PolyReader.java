@@ -11,6 +11,12 @@ import java.util.Scanner;
 public class PolyReader {
 
 	
+	public static Polynomial fromFile(File f) throws Exception {
+		String s = Util.readFileToMemory(f);
+		return fromString(s);
+	}
+	
+	
 	public static Polynomial fromString(String s) {
 		/**
 		 * Format is: 
