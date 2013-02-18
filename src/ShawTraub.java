@@ -18,15 +18,20 @@ public class ShawTraub {
 	 * Returns all normalized derivatives of the given polynomial 'p'
 	 * evaluated at 'x'
 	 * @param p - the polynomial
-	 * @param x - point to evaluate
+	 * @param x - point to evaluate. Must Not be Zero
 	 * @return all derivatives in a list where the index number represents 
 	 * the order of the derivative evaluated. E.g. index 0 will be the
 	 * 0-th order polynomial
 	 */
-	public static ArrayList<Double> getDerivatives(Polynomial p, double x) {
+	public static ArrayList<Double> getDerivatives(Polynomial p, double x)
+			throws Exception {
 		int polyOrder = p.getOrder(); 
 		int n = polyOrder;
 		VMatrix V = new VMatrix(polyOrder);
+		
+		if ( x == 0)
+			throw new Exception("Shaw-Traub Algorithm cannot be used to " +
+								"evaluate polynomial at x = 0");
 		
 		try {
 			for (int i = 0; i <= n - 1; ++i) {

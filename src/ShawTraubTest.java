@@ -23,10 +23,17 @@ public class ShawTraubTest {
 		double expected_d1 = 2*x + 2*x*x;
 		double expected_d2 = 1;
 		
-		ArrayList<Double> actual = ShawTraub.getDerivatives(p, x);
-		assertEquals(expected_d0, actual.get(0), err);
-		assertEquals(expected_d1, actual.get(1), err);
-		assertEquals(expected_d2, actual.get(2), err);
+		ArrayList<Double> actual;
+		try {
+			actual = ShawTraub.getDerivatives(p, x);
+			assertEquals(expected_d0, actual.get(0), err);
+			assertEquals(expected_d1, actual.get(1), err);
+			assertEquals(expected_d2, actual.get(2), err);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			fail("Error occured: " + e);
+		}
+		
 		
 	}
 

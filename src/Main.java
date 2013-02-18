@@ -44,7 +44,14 @@ public class Main {
 		double x = PolyReader.getXValue(s);
 		
 		
-		ArrayList<Double> derivatives = ShawTraub.getDerivatives(p, x);
+		ArrayList<Double> derivatives = null;
+		try {
+			derivatives = ShawTraub.getDerivatives(p, x);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			System.out.println("An Error occured during computation\n" + e);
+			System.exit(-1);
+		}
 		
 		
 		String msg = String.format("Given Polynomial: %s\n" +
