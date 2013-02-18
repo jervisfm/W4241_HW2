@@ -37,7 +37,12 @@ public class Main {
 		
 		ArrayList<Double> derivatives = ShawTraub.getDerivatives(p, x);
 		
+		
+		String msg = String.format("Given Polynomial: %s\n" +
+								  "All *Normalized* Polynomial Derivatives of " +
+								  "above polynomial are listed below:\n\n");
+		
+		System.out.println(msg);
+		ShawTraub.printDerivatives(derivatives);
 	}
-
-	
 }

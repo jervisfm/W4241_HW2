@@ -83,4 +83,16 @@ public class ShawTraub {
 		}
 		return result;
 	}
+	
+	public static void printDerivatives(ArrayList<Double> derivatives) {
+		StringBuffer sb = new StringBuffer();
+		int n = 0;
+		for (double d : derivatives) {
+			String s = String.format("%d-th order (evaluated) polynomial " +
+									 "derivative = %f\n", 
+									 n, d);
+			sb.append(sb);
+		}
+		System.out.println(sb);
+	}
 }
