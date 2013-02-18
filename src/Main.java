@@ -11,7 +11,14 @@ public class Main {
 
 	
 	public static void usage() {
-		String msg = "Usage: \n" +
+		String msg = "Polynomial Derivative Calculator:\n" +
+					 "Computes all the derivative of polynomial in given file " +
+					 "at the given point of X.\n\n" +
+					 "File Format should be like so:\n" +
+					 "[PolynomialOrder]" +
+					 "[All Polynomial Coefficeints]" +
+					 "[Value of Point X]" +
+					 "Usage: \n" +
 					 "java main [file-path]";
 	}
 	
@@ -40,8 +47,10 @@ public class Main {
 		
 		
 		String msg = String.format("Given Polynomial: %s\n" +
+								  "Using X = %.3f\n" + 
 								  "All *Normalized* Polynomial Derivatives of " +
-								  "above polynomial are listed below:\n\n", p);
+								  "above polynomial are listed below:\n", p, x);
+		
 		
 		System.out.println(msg);
 		ShawTraub.printDerivatives(derivatives);
