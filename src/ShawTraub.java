@@ -92,6 +92,7 @@ public class ShawTraub {
 									 "derivative = %f\n", 
 									 n, d);
 			sb.append(s);
+			++n;
 		}
 		System.out.println(sb);
 	}
