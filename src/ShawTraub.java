@@ -91,7 +91,7 @@ public class ShawTraub {
 			String s = String.format("%d-th order (evaluated) polynomial " +
 									 "derivative = %f\n", 
 									 n, d);
-			sb.append(sb);
+			sb.append(s);
 		}
 		System.out.println(sb);
 	}
