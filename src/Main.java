@@ -20,6 +20,7 @@ public class Main {
 					 "[Value of Point X]" +
 					 "Usage: \n" +
 					 "java main [file-path]";
+		System.out.println(msg);
 	}
 	
 	public static void main(String[] args) {
