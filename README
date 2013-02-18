@@ -1,0 +1,71 @@
+Jervis Muindi
+Numerical Algorithms and Complexity
+Homework 2
+February 2013
+
+Introduction
+============
+This is a Java package that implements the Shaw-Traub Algorithm for finding all the (normalized) derivatives of a polynomial evaluated at a specifi point X.
+
+For information on the Shaw-Traub Algorithm Refer to this Resource: 
+Algorithms: Their Complexity and Efficiency.
+2nd. Edition
+Lydia Kronsjo
+University of Birmingham
+Page 37-38
+
+How to Compile
+==============
+
+$ javac Main.java
+
+
+How to Run
+=============
+java Main [file]
+
+where [file] is a file contain a Polynomial specified in the format :
+
+[Polynomial Order]
+[Polynomial Coefficients]
+[Value of X]
+
+
+Test Run
+=============
+To Test my implementation, I picked two polynomials. 
+
+1) x^3 + 3x^2 + 3x + 1
+2) x^4 + 6x^3 + 3x^2 + 4x + 1 
+
+I manually computed all the normalized derivatives of these polynomials evaluated at x=6 by using a Spreadsheet. You can insepct the test.xlsx file to see the spreadsheet.
+
+From this computation, I got the expected derivatives to be:
+
+Polynomial 1: x^3 + 3x^2 + 3x + 1 ; X = 6.
+Derivative-Order	 Evaluated Value
+	0					343
+	1					882
+	2					756
+	3					216
+
+Polynomail 2: x^4 + 6x^3 + 3x^2 + 4x + 1 ; X = 6.
+Derivative Order 	Evaluated Value
+	0					2725
+	1					9312
+	2					11772
+	3					6480
+
+
+Result Discussion
+=================
+
+
+Error Checking
+==============
+A resonable attempt has been made to check and validate all inputs. Where appropriate, inputs are checked for validity and an appropriate exception is thrown.
+
+
+Unit Tests
+==========
+A TDD methodology was followed in writing the package. You can use Eclipse's JUnit version 4 to execute and run the tests. 
