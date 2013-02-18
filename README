@@ -45,20 +45,54 @@ From this computation, I got the expected derivatives to be:
 Polynomial 1: x^3 + 3x^2 + 3x + 1 ; X = 6.
 Derivative-Order	 Evaluated Value
 	0					343
-	1					882
-	2					756
-	3					216
+	1					147
+	2					21
+	3					1
 
-Polynomail 2: x^4 + 6x^3 + 3x^2 + 4x + 1 ; X = 6.
+Polynomial 2: x^4 + 6x^3 + 3x^2 + 4x + 1 ; X = 6.
 Derivative Order 	Evaluated Value
 	0					2725
-	1					9312
-	2					11772
-	3					6480
+	1					1552
+	2					327
+	3					30
+	4					1
 
+
+Running these same polynomials on my program I got the following output: 
+
+Polynomial 1:
+-------------
+Given Polynomial: 1.0x^3 + 3.0x^2 + 3.0x^1 + 1.0x^0
+Using X = 6.000
+All *Normalized* Polynomial Derivatives of above polynomial are listed below:
+
+0-th order (evaluated) polynomial derivative = 343.000000
+1-th order (evaluated) polynomial derivative = 147.000000
+2-th order (evaluated) polynomial derivative = 21.000000
+3-th order (evaluated) polynomial derivative = 1.000000
+
+
+Polynomial 2:
+-------------
+Given Polynomial: 1.0x^4 + 6.0x^3 + 3.0x^2 + 4.0x^1 + 1.0x^0
+Using X = 6.000
+All *Normalized* Polynomial Derivatives of above polynomial are listed below:
+
+0-th order (evaluated) polynomial derivative = 2725.000000
+1-th order (evaluated) polynomial derivative = 1552.000000
+2-th order (evaluated) polynomial derivative = 327.000000
+3-th order (evaluated) polynomial derivative = 30.000000
+4-th order (evaluated) polynomial derivative = 1.000000
 
 Result Discussion
 =================
+As it can be seen from the result above, I got the same result from running my program as I did for when I did the computation manually with a spreadsheet. 
+
+If one wants the "actual" evaluated derivative, then they can obtain it as follows:
+
+Let V be the normalized derivative.
+Regualr Derivative = V * j!
+where j = the order of the derivative
 
 
 Error Checking
