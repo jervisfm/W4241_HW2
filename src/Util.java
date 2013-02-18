@@ -44,4 +44,25 @@ public class Util {
 		}
 		return sb.toString();
 	}
+	
+	/**
+	 * Compues n!
+	 * @param n
+	 * @return
+	 */
+	public static double factorial(int n) throws Exception {
+		
+		if (n < 0) {
+			throw new Exception("Cannot find factorial of negative number:" + n);
+		}
+		
+		if (n == 1 || n == 0)
+			return 1;
+		
+		double result = 1; 
+		for (int i = 1; i <= n; ++i) {
+			result *= i;
+		}
+		return result;
+	}
 }
