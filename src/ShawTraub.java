@@ -54,9 +54,9 @@ public class ShawTraub {
 			
 			/* We finally need to add to VMatrix the result of 
 			 * N-th derivative of the polynomial. This turns to simply be
-			 * the coefficient of the x^n term * x^n / n!
+			 * the coefficient of the x^n term * x^n 
 			 */
-			double val = p.getCoeffXPow(n) * Math.pow(x, n) / Util.factorial(n);
+			double val = p.getCoeffXPow(n) * Math.pow(x, n);
 			V.set(n, n, val); 
 			
 		} catch (Exception e) {
